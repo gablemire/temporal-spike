@@ -1,5 +1,9 @@
 # Temporal Checkout flow - Spike
 
+## Requirements
+- Docker
+- NodeJS 16+
+
 ## How to use
 
 1. Run `npm install`
