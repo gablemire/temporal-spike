@@ -1,0 +1,26 @@
+{
+  "name": "temporal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "dev": "tsc-watch -p tsconfig.dev.json --noClear --onSuccess \"npm run start:worker\"",
+    "start:worker": "node lib/worker/index.js",
+    "start:client": "node lib/client/index.js",
+    "start:paymenthook": "node lib/client/payment-status.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/uuid": "^8.3.4",
+    "rimraf": "^3.0.2",
+    "tsc-watch": "^4.6.2",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "temporalio": "^0.18.0",
+    "uuid": "^8.3.2"
+  }
+}
