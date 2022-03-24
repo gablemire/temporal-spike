@@ -9,5 +9,5 @@ export async function setOrderStatus(
   order.fulfillmentStatus = newStatus;
   await saveOrder(order);
 
-  console.log(`Order ${orderId} set to "In Progress"`);
+  console.log(`Order ${orderId} set to "${newStatus}"`);
 }

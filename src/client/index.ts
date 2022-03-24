@@ -33,7 +33,7 @@ async function main(): Promise<void> {
 
   console.log(`Order ${order.id} created`, order);
 
-  const handle = await client.start(orderFulfillmentWorkflow, {
+  await client.start(orderFulfillmentWorkflow, {
     args: [order.id],
     taskQueue: "temporal-example",
     workflowId: order.workflowId,

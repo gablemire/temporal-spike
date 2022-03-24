@@ -23,7 +23,7 @@ async function readJsonFile<T>(id: string): Promise<T> {
 
 async function writeJsonFile<T>(id: string, content: T): Promise<void> {
   const filePath = path.join(DB_PATH, id);
-  const json = JSON.stringify(content);
+  const json = JSON.stringify(content, undefined, 2);
 
   await fs.writeFile(filePath, json, {
     encoding: "utf8",

@@ -11,4 +11,6 @@ export async function getPaymentStatus(
 
 export async function capturePayment(orderId: string): Promise<void> {
   const order = await getOrder(orderId);
+
+  console.log(`Capturing payment for order ${order.id}`);
 }
